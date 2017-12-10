@@ -1,0 +1,37 @@
+.wrap-body .siderbar {
+  position: relative;
+  background: #222326;
+  padding: 40px 20px;
+}
+
+.sider-item h3 {
+  color: #6c6c6c;
+  font-size: 0.8rem;
+}
+
+.sider-item li {
+  height: 40px;
+  line-height: 40px;
+}
+
+.sider-item li a {
+  color: #adafb2;
+  text-decoration: none;
+}
+
+.sider-item li i {
+  padding-right: 10px;
+}
+
+.person-login {
+  display: inline-flex;
+  position: absolute;
+  bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.person-login .login {
+  padding: 10px;
+  color: #adafb2;
+  font-size: .5rem;
+}

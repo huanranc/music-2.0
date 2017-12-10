@@ -4,19 +4,21 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Home from '../../page/Home';
+import NewAblum from '../../page/NewAblum';
 import About from '../../page/About';
 import Topics from '../../page/Topic';
+import Datails from '../../page/Datails';
 
 import './contains.css';
 
 class Contains extends Component {
   render(){
     return(
-      <div className="wrap-contains">
-      <Route exact path="/" component={Home} />
+      <div className="contains">
+      <Route exact path="/"  component={NewAblum}/>
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
+      <Route path="/datails/:id" component={Datails} />
       </div>
     );
   };

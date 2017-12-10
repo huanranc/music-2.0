@@ -11,9 +11,9 @@ import Contains from './components/Contains/Contains';
 
 const Main = () => (
   <Router>
-    <div>
+    <div className="wrap">
     <Header />
-    <div>
+    <div className="wrap-body">
       <Siderbar />
       <Contains>
       </Contains>

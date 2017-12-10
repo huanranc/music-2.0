@@ -1,1 +1,25 @@
 @import '~antd/dist/antd.css';
+html,
+body {
+  height:100%;
+  font-size: 100%;
+}
+.wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.wrap-body {
+  width: 100%;
+  min-height: 612px;
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+.wrap-body .siderbar{
+  width: 200px;
+}
+.wrap-body .contains {
+  flex: 1;
+  box-shadow: 3px 3px 5px #ececec inset;
+}

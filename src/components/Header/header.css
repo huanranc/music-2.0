@@ -1,6 +1,25 @@
-.wrap-header {
+.header {
   width: 100%;
   height: 50px;
+  z-index: 999;
+  top: 0;
+  left: 0;
   background: #fff;
-  box-shadow: 2px 2px 3px #ececec;
+  display: flex;
+  align-items: center;
+}
+.button-group {
+  margin-left: 140px;
+  margin-right: 10px;
+}
+.button-group .btn,
+.search-btn input{
+  border-radius: 15px;
+}
+.search-box {
+  width: 18%;
+  margin-left: 30px;
+}
+.search-box .ant-input {
+  border-radius: 15px;
 }
