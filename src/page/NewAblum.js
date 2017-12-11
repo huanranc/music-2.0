@@ -4,13 +4,28 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import {newSong} from '../mock/newSong';
 
 class NewAblum extends Component {
+  constructor() {
+    super(...arguments);
+    this.state={songs:[]}
+  }
+  componentDidMount() {
+    var myFetchOptions ={
+      method:'GET'
+    };
+    fetch("/top/album?offset=0&limit=10",myFetchOptions)
+    .then(response => response.json())
+    .then(json => {
+      this.setState({songs:json.albums})}
+  );
+  };
+
   render() {
-    let newSongs=null;
-    newSongs=newSong.map((newSong) => {
-       return <li key={newSong.id} className="song-list">
+    const {songs} = this.state;
+    const songList=songs.length ?
+    songs.map((newSong,index) => {
+       return <li key={index} className="song-list">
        <Link to={`datails/${newSong.id}`}>
           <div className="card">
             <div className="card-image">
@@ -24,11 +39,13 @@ class NewAblum extends Component {
           </div>
           </Link>
         </li>
-    });
+    })
+    :'没有数据'
+    ;
       return (
         <div className="content-layout">
           <h2>新碟上架</h2>
-          <ul className="card-row">{newSongs}</ul>
+          <ul className="card-row">{songList}</ul>
         </div>
       )
     }
