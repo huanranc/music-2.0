@@ -81,12 +81,66 @@
   padding: 50px 0;
 }
 .detailAblum-img img{
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
 }
 .detailAblum-songlist {
   display: flex;
+  width: 100%;
   flex: 1;
   flex-wrap: wrap;
   flex-direction:column;
+  padding: 60px 0;
+}
+
+.detailAblum-songlist .songlist-title h2,
+.detailAblum-songlist .songlist-title,
+.detailAblum-songlist .song-control {
+  color: #fff;
+}
+
+.detailAblum-songlist .song-control {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.detailAblum-songlist .songlist-title p {
+  margin: 0;
+}
+
+.save-btn {
+  width: 90px;
+  padding: 6px 18px;
+  margin: 0 15px;
+  background: #4fb6f2;
+  border-radius: 15px;
+  border:0;
+  outline: 0;
+}
+
+.songlist {
+  padding: 10px 0;
+}
+
+.songlist a {
+  color: #dadada;
+}
+
+.songlist li {
+  padding: 10px 0;
+  position: relative;
+}
+
+.songlist li::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #2e2f2f;
+}
+
+.songlist span {
+  padding:0 20px 0 0;
 }

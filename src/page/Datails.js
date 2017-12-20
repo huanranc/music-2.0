@@ -25,9 +25,11 @@ class Datails extends Component {
     console.log(newSong)
     const songslist=newSong.length ?
     newSong.map((songs,index) => {
-       return <li key={index} className="song-list">
+       return <li key={index}>
        <Link to={`single/${songs.id}`}>
-          {songs.name}
+          <span>{
+            index<9?`0${index+1}`:index+1
+          } </span>{songs.name}
           </Link>
         </li>
     }):'暂时没有数据';
@@ -38,7 +40,24 @@ class Datails extends Component {
               newSong.length>0?newSong[newSong.length-1].al.picUrl:'/'}
               />
           </div>
-          <ul className="detailAblum-songlist">{songslist}</ul>
+          <div className="detailAblum-songlist">
+              <div className="songlist-title">
+                <h2>Merry & Happy</h2>
+                <p>
+                <span>歌手：</span>
+                <span>TWICE</span>
+                <span> 时间：</span>
+                <span>2017-12-11</span>
+                </p>
+              </div>
+              <div className="song-control">
+                <i className="fa fa-play-circle fa-2x"></i>
+                <button className="save-btn">SAVED</button>
+              </div>
+              <ul className="songlist">
+              {songslist}
+              </ul>
+          </div>
         </div>
       )
     }
