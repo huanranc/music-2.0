@@ -8,7 +8,7 @@ import {
 import NewAblum from '../../page/NewAblum';
 import About from '../../page/About';
 import Topics from '../../page/Topic';
-import Datails from '../../page/Datails';
+import SongList from '../../page/SongList';
 
 import './contains.css';
 
@@ -19,7 +19,7 @@ class Contains extends Component {
       <Route exact path="/"  component={NewAblum}/>
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
-      <Route path="/datails/:id" component={Datails}/>
+      <Route path="/album/:id" component={SongList} />
       </div>
     );
   };

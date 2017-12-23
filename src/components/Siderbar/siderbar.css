@@ -1,11 +1,12 @@
 .wrap-body .siderbar {
   position: relative;
-  background: #222326;
+  background: #f0f0f0;
+  border-right: 1px solid #e5e5e5;
   padding: 40px 20px;
 }
 
 .sider-item h3 {
-  color: #6c6c6c;
+  color: #5c5c5c;
   font-size: 0.8rem;
 }
 
@@ -15,7 +16,7 @@
 }
 
 .sider-item li a {
-  color: #adafb2;
+  color: #5c5c5c;
   text-decoration: none;
 }
 
@@ -31,6 +32,6 @@
 }
 .person-login .login {
   padding: 10px;
-  color: #adafb2;
+  color: #5c5c5c;
   font-size: .5rem;
 }

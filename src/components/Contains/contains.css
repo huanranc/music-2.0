@@ -1,4 +1,5 @@
 .wrap-contains {
+  box-sizing: border-box;
   padding: 10px;
 }
 .content-layout {
@@ -19,7 +20,7 @@
   border:0;
   box-shadow: none;
 }
-.song-list {
+.ablum-list {
   margin: 15px;
   margin-bottom: 5px;
   width: calc( 100%/5 - 2*18px);
@@ -54,7 +55,7 @@
 }
 
 .card-body h3 {
-  color: #212225;
+  color: #5c5c5c;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -62,85 +63,69 @@
   margin: 0;
 }
 .card-body p {
-  color: #6e727d;
+  color: #5c5c5c;
   margin: 0;
   font-size: .5rem;
 }
 
-.detailAblum-content {
-  display: flex;
+.song-list {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  background: #222326;
+  padding: 0 1.875rem;
+  background-color: #fafafa;
 }
-.detailAblum-img {
-  width: 33.3%;
+
+.song-list li {
   display: flex;
-  justify-content: center;
-  padding: 50px 0;
-}
-.detailAblum-img img{
-  width: 200px;
-  height: 200px;
-}
-.detailAblum-songlist {
-  display: flex;
-  width: 100%;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction:column;
-  padding: 60px 0;
-}
-
-.detailAblum-songlist .songlist-title h2,
-.detailAblum-songlist .songlist-title,
-.detailAblum-songlist .song-control {
-  color: #fff;
-}
-
-.detailAblum-songlist .song-control {
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-}
-
-.detailAblum-songlist .songlist-title p {
-  margin: 0;
-}
-
-.save-btn {
-  width: 90px;
-  padding: 6px 18px;
-  margin: 0 15px;
-  background: #4fb6f2;
-  border-radius: 15px;
-  border:0;
-  outline: 0;
-}
-
-.songlist {
-  padding: 10px 0;
-}
-
-.songlist a {
-  color: #dadada;
-}
-
-.songlist li {
-  padding: 10px 0;
+  flex-direction: row;
+  height: 2.875rem;
+  padding: 0 50px;
   position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #fafafa;
 }
-
-.songlist li::before {
+.song-list li::before {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 100%;
+  height: 1px;
   bottom: 0;
   left: 0;
-  border: 1px solid #2e2f2f;
+  background-color: #e1e1e2;;
 }
 
-.songlist span {
-  padding:0 20px 0 0;
+.song-list .song-name {
+  width: 50%;
+  padding-left: 30px;
+  text-align: left;
+  color: #191919;
+  font-size: 0.8rem;
+}
+
+.song-list .song-name .alias {
+  color: #646464;
+}
+.song-list .song-al-name,
+.song-list .song-art-name {
+  width: 25%;
+  text-align: center;
+  color: #191919;
+  font-size: 0.8rem;
+}
+
+.song-list .song-art-name a {
+  text-align: center;
+  color: #191919;
+  font-size: 0.8rem;
+}
+
+.song-list .song-dt {
+  width: 15%;
+  text-align: center;
+  color: #191919;
+  font-size: 0.8rem;
+}
+
+.song-list .title {
+  color: #b6b6b6;
 }

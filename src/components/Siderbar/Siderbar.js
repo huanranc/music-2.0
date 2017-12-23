@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
 import Avatar from 'antd/lib/avatar';
@@ -21,9 +19,9 @@ class Siderbar extends Component {
         <div className="sider-item">
           <h3>发现</h3>
           <ul>
-            <li><Link to="/"><i className="fa fa-music fa-lg"></i>最新音乐</Link></li>
-            <li><Link to="/about"><i className="fa fa-bar-chart fa-lg"></i>排行榜</Link></li>
-            <li><Link to="/topics"><i className="fa fa-music fa-lg"></i>无线电台</Link></li>
+            <li><Link to="/"><i className="fa fa-music fa-lg"></i>推荐音乐</Link></li>
+            <li><Link to="/about"><i className="fa fa-bar-chart fa-lg"></i>榜单</Link></li>
+            <li><Link to="/topics"><i className="fa fa-music fa-lg"></i>聆听FM</Link></li>
           </ul>
         </div>
         <div className="sider-item">
