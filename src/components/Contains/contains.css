@@ -42,18 +42,6 @@
   box-shadow: 5px 8px 30px #cccccc;
 }
 
-.card-image::after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  top: 15%;
-  left: 100%;
-  width: 35px;
-  height: 120px;
-  background: url(./album.png) no-repeat;
-  background-position: 0px -73px;
-}
-
 .card-body h3 {
   color: #5c5c5c;
   white-space: nowrap;
