@@ -13,13 +13,14 @@ class List extends Component {
       }
   }
   componentDidMount() {
+    let that=this;
     var myFetchOptions ={
       method:'GET'
     };
     fetch("/album?id="+this.props.id,myFetchOptions)
     .then(response => response.json())
     .then(json => {
-      this.setState({
+      that.setState({
         newSong:json.songs,
         album:json.album,
         alias:json.album.alias
