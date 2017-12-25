@@ -26,7 +26,7 @@ class List extends Component {
         alias:json.album.alias
       })}
   );
-  }
+  };
 
   timeDt(time) {
     let durationTime=parseInt(time/1000);

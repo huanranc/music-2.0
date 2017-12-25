@@ -7,8 +7,8 @@ import List from '../components/Contains/List'
 import '../commpon/songlist.css'
 
 class SongList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state={
       album:[],
       artist:[],
@@ -31,6 +31,7 @@ class SongList extends Component {
   }
 
   render() {
+    const list =this.props.match.params.id;
     const {alias,album,artist} = this.state;
     console.log(artist)
     console.log(alias)
@@ -52,7 +53,7 @@ class SongList extends Component {
           </div>
         </div>
         <div className="list">
-          <List id={this.props.match.params.id}/>
+          <List id={list}/>
         </div>
       </div>
     )
