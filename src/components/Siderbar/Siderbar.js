@@ -19,17 +19,15 @@ class Siderbar extends Component {
         <div className="sider-item">
           <h3>发现</h3>
           <ul>
-            <li><Link to="/home"><i className="fa fa-music fa-lg"></i>音乐馆</Link></li>
-            <li><Link to="/"><i className="fa fa-music fa-lg"></i>推荐音乐</Link></li>
-            <li><Link to="/about"><i className="fa fa-bar-chart fa-lg"></i>榜单</Link></li>
-            <li><Link to="/topics"><i className="fa fa-music fa-lg"></i>聆听FM</Link></li>
+            <li><Link to="/discover"><i className="fa fa-music fa-lg"></i>音乐馆</Link></li>
+            <li><Link to="/topic"><i className="fa fa-music fa-lg"></i>聆听FM</Link></li>
           </ul>
         </div>
         <div className="sider-item">
         <h3>我的音乐</h3>
         <ul>
-          <li><Link to="/"><i className="fa fa-music fa-lg"></i>喜欢的音乐</Link></li>
-          <li><Link to="/about"><i className="fa fa-bar-chart fa-lg"></i>本地音乐</Link></li>
+          <li><Link to="/topic"><i className="fa fa-music fa-lg"></i>喜欢的音乐</Link></li>
+          <li><Link to="/topic"><i className="fa fa-bar-chart fa-lg"></i>本地音乐</Link></li>
         </ul>
       </div>
       </div>

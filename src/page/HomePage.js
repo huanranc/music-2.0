@@ -7,7 +7,7 @@ class HomePage extends Component {
   render() {
       return (
         <div className="content-layout">
-          主页面
+          个性推荐
         </div>
       )
     }

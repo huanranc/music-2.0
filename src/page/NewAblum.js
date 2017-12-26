@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Link
 } from 'react-router-dom';
-
 class NewAblum extends Component {
   constructor() {
     super(...arguments);
@@ -24,7 +23,7 @@ class NewAblum extends Component {
     const songList=songs.length ?
     songs.map((newSong,index) => {
        return <li key={index} className="ablum-list">
-       <Link to={`album/${newSong.id}`}>
+       <Link to={`/album/${newSong.id}`}>
           <div className="card">
             <div className="card-image">
               <img alt="example" width="100%" src={newSong.picUrl} />

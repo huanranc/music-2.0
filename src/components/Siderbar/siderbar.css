@@ -3,6 +3,8 @@
   background: #f0f0f0;
   border-right: 1px solid #e5e5e5;
   padding: 40px 20px;
+  min-height: 600px;
+  height: 100%;
 }
 
 .sider-item h3 {

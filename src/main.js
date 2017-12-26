@@ -8,6 +8,7 @@ import {
 import Header from './components/Header/Header';
 import Siderbar from './components/Siderbar/Siderbar';
 import Contains from './components/Contains/Contains';
+import ContainsBody from './components/Contains/ContainsBody';
 
 const Main = () => (
   <Router>
