@@ -117,3 +117,28 @@
 .song-list .title {
   color: #b6b6b6;
 }
+
+.song-name a {
+  position: relative;
+  margin: 0 .5rem;
+}
+
+.song-name .play-btn::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: url(../../commpon/play-list.png);
+  background-size:cover;
+}
+
+.song-name .stop-btn::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: url(../../commpon/stop-list.png);
+  background-size:cover;
+}

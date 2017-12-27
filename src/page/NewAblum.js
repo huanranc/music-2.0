@@ -11,11 +11,10 @@ class NewAblum extends Component {
     var myFetchOptions ={
       method:'GET'
     };
-    fetch("/top/album?offset=0&limit=10",myFetchOptions)
+    fetch("/top/album?offset=0&limit=15",myFetchOptions)
     .then(response => response.json())
-    .then(json => {
-      this.setState({songs:json.albums})}
-  );
+    .then(json => 
+      this.setState({songs:json.albums}));
   };
 
   render() {

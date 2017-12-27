@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Icon from 'antd/lib/icon';
-import Avatar from 'antd/lib/avatar';
 import './play.css';
 
 class Play extends Component {
@@ -11,7 +9,8 @@ class Play extends Component {
       currentTime: 0,
       duration:0,
       progress:0,
-      volume: 80 + '%'
+      volume: 80 + '%',
+      data:[]
     }
     this.handlePlayerClick = this.handlePlayerClick.bind(this);
     this.timeStart = this.timeStart.bind(this);
@@ -20,7 +19,7 @@ class Play extends Component {
   }
 
 componentDillMount(){
-  let audioplay = this.refs.audioplay;
+  
 }
 
 timeStart(time) {
@@ -71,7 +70,7 @@ this.onProgress&&this.onProgress(settedProgress);
   render(){
     return(
       <div className="play">
-        <audio id="audio" preload="true"  onTimeUpdate={ this.controlAudio}  ref="audioplay">
+        <audio id="audio" preload="true"  src='http://music.163.com/song/media/outer/url?id=987228.mp3' onTimeUpdate={ this.controlAudio}  ref="audioplay">
           您的浏览器不支持 audio 与元素。
         </audio>
         <a className="singer-icon"><span className="icon-text">singer</span></a>
@@ -91,7 +90,7 @@ this.onProgress&&this.onProgress(settedProgress);
         </div>
         <span style={{ fontSize: 12, color: '#fff' }}>{this.timeStart(this.state.duration)}</span>
         <div className="volume-progress">
-           <Icon type="sound" style={{ fontSize: 20, color: '#fff' }} />
+           
            <div className="play-progress">
               <div className="progress-nav" style={{ width: this.state.volume }}></div>
          </div>

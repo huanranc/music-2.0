@@ -9,8 +9,10 @@ class Nav extends Component {
     return(
     <nav className="nav">
       <ul className="nav-bar">
-        <li><Link to="/discover">个性推荐</Link></li>
+        <li><Link to="/discover">推荐</Link></li>
+        <li><Link to="/discover/top">歌单</Link></li>
         <li><Link to="/discover/top">排行榜</Link></li>
+        <li><Link to="/discover/top">歌手</Link></li>
         <li><Link to="/discover/album">最新音乐</Link></li>
       </ul>
     </nav>
