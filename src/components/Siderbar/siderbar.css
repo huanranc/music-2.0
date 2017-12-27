@@ -3,7 +3,7 @@
   background: #f0f0f0;
   border-right: 1px solid #e5e5e5;
   padding: 40px 20px;
-  min-height: 600px;
+  min-height: 612px;
   height: 100%;
 }
 
@@ -36,4 +36,10 @@
   padding: 10px;
   color: #5c5c5c;
   font-size: .5rem;
+}
+
+@media screen and (min-width:1200px) {
+  .wrap-body .siderbar {
+    min-height: 898px;
+  }
 }

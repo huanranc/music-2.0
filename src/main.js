@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Siderbar from './components/Siderbar/Siderbar';
 import Contains from './components/Contains/Contains';
 import ContainsBody from './components/Contains/ContainsBody';
+import Play from './components/Play/play';
 
 const Main = () => (
   <Router>
@@ -18,6 +19,7 @@ const Main = () => (
       <Siderbar />
       <Contains>
       </Contains>
+      <Play />
     </div>
     </div>
   </Router>
