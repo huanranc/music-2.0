@@ -61,7 +61,7 @@ class List extends Component {
 
   render() {
     console.log(this.state.songId)
-    const {newSong,album,alias} = this.state;
+    let {newSong,album,alias} = this.state;
     const songslist=newSong.length ?
     newSong.map((songs,index) => {
        return <li key={index}
