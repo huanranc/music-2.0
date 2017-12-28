@@ -10,9 +10,9 @@ class List extends Component {
       newSong:[],
       album:[],
       alias:[],
-      isPlay:false
+      isPlay:false,
+      songId:''
       }
-      this.handlePlayerClick = this.handlePlayerClick.bind(this);
   }
   componentDidMount() {
     let that=this;
@@ -45,20 +45,27 @@ class List extends Component {
     }
     return minute+symbol+second
   }
-  
-  handlePlayerClick() {
-    this.setState(prevState=>({
-      isPlay:!prevState.isPlay,
-      //duration:this.audioplay.duration
-    }));
+
+
+  handleSong(id,e){
+    e.preventDefault();
+    this.setState({
+      songId:id
+    })
+    alert(id);
+  }
+
+ Song(id){
+    return id;
   }
 
   render() {
+    console.log(this.state.songId)
     const {newSong,album,alias} = this.state;
-    console.log(newSong)
     const songslist=newSong.length ?
     newSong.map((songs,index) => {
-       return <li key={index}>
+       return <li key={index}
+      >
        <span className="song-number">{
         index<9?`0${index+1}`:index+1
       } </span>
@@ -74,6 +81,7 @@ class List extends Component {
               <span className="alias">（{alias}）</span>
             </span>
             }
+            <a onClick={this.handleSong.bind(this,this.Song(songs.id))}>play</a>
           </span>
           <span className="song-art-name">
             <Link to={`artist/${album.artist.id}`}>

@@ -11,7 +11,7 @@ class Header extends Component {
     return(
       <header className="header">
         <ButtonGroup className="button-group">
-          <Button icon="left" className="btn"/>
+          <Button icon="left" className="btn" />
           <Button icon="right" className="btn"/>
         </ButtonGroup>
         <Search className="search-btn"

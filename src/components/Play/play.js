@@ -10,7 +10,8 @@ class Play extends Component {
       duration:0,
       progress:0,
       volume: 80 + '%',
-      data:[]
+      currentMusic:this.props.currentMusic,
+      currentMusicUrl:''
     }
     this.handlePlayerClick = this.handlePlayerClick.bind(this);
     this.timeStart = this.timeStart.bind(this);
@@ -19,7 +20,7 @@ class Play extends Component {
   }
 
 componentDillMount(){
-  
+  console.log(this.state.currentMusic)
 }
 
 timeStart(time) {
@@ -70,7 +71,7 @@ this.onProgress&&this.onProgress(settedProgress);
   render(){
     return(
       <div className="play">
-        <audio id="audio" preload="true"  src='http://music.163.com/song/media/outer/url?id=987228.mp3' onTimeUpdate={ this.controlAudio}  ref="audioplay">
+        <audio id="audio" preload="true"  src='http://music.163.com/song/media/outer/url?id=526434593.mp3' onTimeUpdate={ this.controlAudio}  ref="audioplay">
           您的浏览器不支持 audio 与元素。
         </audio>
         <a className="singer-icon"><span className="icon-text">singer</span></a>
