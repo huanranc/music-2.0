@@ -27,12 +27,24 @@ class Slider extends Component {
     console.log(banners.pic)
     const list=banners.length>0?
     banners.map((item,index)=> {
-      return <li key={index}><img src={item.pic}/></li>
+      return <li key={index} className={`img${index+1}`} ><img src={item.pic}/></li>
     }):'暂时无数据'
       return (
         <div className="slider">
-          <ul className="slider-body">
-            {list}
+          <div className="slider-body">
+            <ul>
+              {list}
+            </ul>
+          </div>
+          <a href="javascript:;" className="prev btn">pref</a>
+	        <a href="javascript:;" className="next btn">next</a>
+          <ul className="dots">
+            <li className="dot dot-active"><a href="#">1</a></li>
+            <li className="dot"><a href="#">2</a></li>
+            <li className="dot"><a href="#">3</a></li>
+            <li className="dot"><a href="#">4</a></li>
+            <li className="dot"><a href="#">5</a></li>
+            <li className="dot"><a href="#">6</a></li>
           </ul>
         </div>
       )

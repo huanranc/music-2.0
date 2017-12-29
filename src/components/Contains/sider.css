@@ -1,0 +1,124 @@
+.slider {
+  width: 90%;
+  height: 16rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slider-body {
+  width: 48.5rem;
+  height: 15rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.slider-body img {
+	width: 34rem;
+	height: 15rem;
+	border:none;
+	float: left;
+}
+
+.p1{
+	transform: translate3d(-224px,0,0) scale(0.81);
+}
+.p2{
+	transform: translate3d(0px,0,0) scale(0.81);
+	transform-origin: 0 50%;
+	opacity: 0.8;
+	z-index: 2;
+}
+.p3{
+	transform:translate3d(224px,0,0) scale(1);
+	z-index: 3;
+	opacity: 1;
+}
+.p4{
+	transform:translate3d(449px,0,0) scale(0.81);
+	transform-origin:100% 50%;
+	opacity: 0.8;
+	z-index: 2;
+}
+.p5{
+	transform:translate3d(672px,0,0) scale(0.81);
+}
+.p6{
+	transform:translate3d(896px,0,0) scale(0.81);
+}
+.p7{
+	transform:translate3d(1120px,0,0) scale(0.81);
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  text-align: center;
+}
+
+.dots .dot {
+  position: relative;
+  float: left;
+  width: 1.5rem;
+  height: 0.125rem;
+  margin: 0.33rem;
+}
+
+.dot a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-indent: 100%;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.dot a :focus {
+  outline: none;
+}
+
+.dot a :hover {
+  background-color: #fff;
+}
+
+.dot a :active {
+  box-shadow: inset 0 0 0 5px #fff;
+}
+
+.btn {
+  z-index: 2;
+  position: absolute;
+	top: auto;
+	width: 60px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	background: #ccc;
+	cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
