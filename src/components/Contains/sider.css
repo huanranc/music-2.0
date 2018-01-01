@@ -1,12 +1,13 @@
 .slider {
   width: 90%;
-  height: 16rem;
+  height: 15rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .slider-body {
@@ -18,42 +19,52 @@
   flex-direction: row;
 }
 
+.slider-body li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+	/* opacity: 0; */
+	transition: all 0.3s ease-out;
+}
+
 .slider-body img {
 	width: 34rem;
-	height: 15rem;
+	height: 13rem;
 	border:none;
 	float: left;
 }
 
-.p1{
-	transform: translate3d(-224px,0,0) scale(0.81);
+.img1{
+  transform: translate3d(-243px,0,0) scale(0.81);
+  opacity: 0;
 }
-.p2{
+.img2{
 	transform: translate3d(0px,0,0) scale(0.81);
 	transform-origin: 0 50%;
 	opacity: 0.8;
 	z-index: 2;
 }
-.p3{
-	transform:translate3d(224px,0,0) scale(1);
+.img3{
+	transform:translate3d(243px,0,0) scale(1);
 	z-index: 3;
 	opacity: 1;
 }
-.p4{
-	transform:translate3d(449px,0,0) scale(0.81);
+.img4{
+	transform:translate3d(486px,0,0) scale(0.81);
 	transform-origin:100% 50%;
 	opacity: 0.8;
 	z-index: 2;
 }
-.p5{
-	transform:translate3d(672px,0,0) scale(0.81);
+.img5{
+  transform:translate3d(729px,0,0) scale(0.81);
+  opacity: 0;
 }
-.p6{
-	transform:translate3d(896px,0,0) scale(0.81);
+.img6{
+  transform:translate3d(972px,0,0) scale(0.81);
 }
-.p7{
-	transform:translate3d(1120px,0,0) scale(0.81);
-}
+
+
 
 .dots {
   display: flex;

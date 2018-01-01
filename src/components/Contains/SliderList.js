@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './sider.css'
+import  Carousel from 'antd/lib/carousel'
+import './sider.css';
 
-class Slider extends Component {
+class SliderList extends Component {
   constructor(props) {
     super(props);
     this.state={
-      banners:[]
+      banners:[],
+      imgIndex: 1
     }
   }
   componentDidMount() {
@@ -21,23 +23,36 @@ class Slider extends Component {
       })}
   );
   };
+  prev(index,e){
+    console.log(index)
+    this.setState(prevState=>({
+      imgIndex:index--
+    }))
+    console.log(index)
+  }
+
+  next(index,e){
+    console.log(index)
+    this.setState(prevState=>({
+      imgIndex: index++
+    }))
+    console.log(index)
+  }
   render() {
     const {banners} = this.state;
-    console.log(banners)
-    console.log(banners.pic)
     const list=banners.length>0?
     banners.map((item,index)=> {
-      return <li key={index} className={`img${index+1}`} ><img src={item.pic}/></li>
+      return <li key={index} className={`img${index+this.state.imgIndex}`} ><img src={item.pic}/></li>
     }):'暂时无数据'
       return (
         <div className="slider">
           <div className="slider-body">
-            <ul>
+          <ul>
               {list}
-            </ul>
+              </ul>
           </div>
-          <a href="javascript:;" className="prev btn">pref</a>
-	        <a href="javascript:;" className="next btn">next</a>
+          <a href="javascript:;" className="prev btn" onClick={this.prev.bind(this,this.state.imgIndex)}>pref</a>
+	        <a href="javascript:;" className="next btn" onClick={this.next.bind(this,this.state.imgIndex)}>next</a>
           <ul className="dots">
             <li className="dot dot-active"><a href="#">1</a></li>
             <li className="dot"><a href="#">2</a></li>
@@ -51,4 +66,4 @@ class Slider extends Component {
     }
 }
 
-export default Slider;
+export default SliderList;

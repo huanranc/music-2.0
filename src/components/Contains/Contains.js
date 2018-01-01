@@ -23,6 +23,7 @@ class Contains extends Component {
         <Route path="/discover" component={Discover} />
         <Route path="/album/:id" component={SongList} />
         <Route path="/topic" component={About} />
+        <Route path="/artist/:id"   component={About} />
       </div>
     );
   };
