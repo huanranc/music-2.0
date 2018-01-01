@@ -55,3 +55,42 @@
   margin: 0;
   font-size: .5rem;
 }
+
+.play-list {
+  display: block;
+  margin: 15px;
+  margin-bottom: 5px;
+  width: 9.9rem;
+  float: left;
+}
+
+.recommend {
+  position: relative;
+}
+.recommend .card-image {
+  position: relative;
+  box-shadow: none;
+}
+
+.recommend .show {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top:0;
+  left: 0;
+  color: #fff;
+  font-size: .5rem;
+  background: rgba(0, 0, 0,.5);
+  padding: .25rem;
+}
+
+.title::after {
+  content: '';
+  height: 1px;
+  width: 95%;
+  background: #cccccc;
+  position: absolute;
+  top: 2.5rem;
+  left: 1.5rem;
+}
