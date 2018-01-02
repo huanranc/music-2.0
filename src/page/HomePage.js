@@ -3,6 +3,7 @@ import {
   Link
 } from 'react-router-dom';
 import SliderList from '../components/Contains/SliderList';
+import NewSong from '../components/Contains/NewSong';
 import Recommend from '../components/Contains/Recommend';
 
 class HomePage extends Component {
@@ -14,6 +15,7 @@ class HomePage extends Component {
       return (
         <div className="content-layout">
           <SliderList/>
+          <NewSong />
           <Recommend />
         </div>
       )

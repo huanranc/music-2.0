@@ -31,13 +31,13 @@ class Recommend extends Component {
     var myFetchOptions ={
       method:'GET'
     };
-    fetch("/personalized?offset=0&limit=12",myFetchOptions)
+    fetch("/personalized?offset=0&limit=14",myFetchOptions)
     .then(response => response.json())
     .then(json => 
       this.setState({result:json.result}));
   };
-  showhandle= (e) => {
-    console.log(e)
+  showhandle= (key) => {
+    console.log(key)
     this.setState({
       show: 'block'
     })
@@ -52,11 +52,11 @@ class Recommend extends Component {
     console.log(this.state.show);
     const resultList=result.length ?
     result.map((newSong,index) => {
-       return <li key={index} className="play-list">
+       return <li key={index} className="play-list" onMouseOver={ this.showhandle }  onMouseOut= { this.nonehandle}>
        <Link to={`/playlist/${newSong.id}`}>
           <div className="card">
-            <div className="card-image"  onMouseOver={ this.showhandle }  onMouseOut= { this.nonehandle}>
-              <p className="show" style={{display:this.state.show}}>{newSong.copywriter}</p>
+            <div className="card-image">
+              <div className="show" style={{display:this.state.show}}>{newSong.copywriter}</div>
               <img alt="example" width="100%" src={newSong.picUrl} />
             </div>
             <div  className="card-body">

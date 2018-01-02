@@ -32,7 +32,7 @@
 }
 .card-row::before ,.card-row::after {
   display: table;
-  content: '';
+  content: "";
   clear: both;
 }
 
@@ -57,10 +57,8 @@
 }
 
 .play-list {
-  display: block;
-  margin: 15px;
   margin-bottom: 5px;
-  width: 9.9rem;
+  width:  calc( 100%/7 - 5px);
   float: left;
 }
 
@@ -72,25 +70,36 @@
   box-shadow: none;
 }
 
-.recommend .show {
+.card-image > .show {
   width: 100%;
   height: auto;
   margin: 0;
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   color: #fff;
   font-size: .5rem;
-  background: rgba(0, 0, 0,.5);
+  text-align: center;
+  background: rgba(0,0,0,.5);
   padding: .25rem;
+  opacity: 0;
+}
+.card-image:hover > .show {
+  opacity: 1;
 }
 
-.title::after {
-  content: '';
-  height: 1px;
-  width: 95%;
-  background: #cccccc;
+.card-image::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
-  top: 2.5rem;
-  left: 1.5rem;
+  bottom: .25rem;
+  right: .25rem;
+  background: url(../../commpon/play-list-02.png);
+  background-size:cover;
+}
+
+.card-image:hover::after {
+  background: url(../../commpon/play-list-02-hover.png);
+  background-size:cover;
 }
