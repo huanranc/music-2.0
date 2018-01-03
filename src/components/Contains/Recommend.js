@@ -31,7 +31,7 @@ class Recommend extends Component {
     var myFetchOptions ={
       method:'GET'
     };
-    fetch("/personalized?offset=0&limit=14",myFetchOptions)
+    fetch("/personalized?offset=0&limit=6",myFetchOptions)
     .then(response => response.json())
     .then(json => 
       this.setState({result:json.result}));

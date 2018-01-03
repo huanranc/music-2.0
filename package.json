@@ -17,5 +17,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://neteasecloudmusicapi.eibook.cn"
+  "proxy": "http://neteasecloudmusicapi.eibook.cn",
+  "devDependencies": {
+    "swiper": "^4.0.7"
+  }
 }
