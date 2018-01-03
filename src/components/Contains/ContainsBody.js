@@ -20,7 +20,7 @@ class ContainsBody extends Component {
         <Route exact path="/"  component={HomePage} />
         <Route exact path="/discover"  component={HomePage} />
         <Route path="/discover/album"  component={NewAblum} />
-        <Route path="/discover/top"  component={Topics} />
+        <Route path="/discover/playlist"  component={Topics} />
       </div>
     );
   };
