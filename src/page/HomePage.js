@@ -5,6 +5,7 @@ import {
 import SliderList from '../components/Contains/SliderList';
 import NewSong from '../components/Contains/NewSong';
 import Recommend from '../components/Contains/Recommend';
+import Exclusive from '../components/Contains/exclusive';
 
 class HomePage extends Component {
   constructor(props) {
@@ -15,8 +16,9 @@ class HomePage extends Component {
       return (
         <div className="content-layout">
           <SliderList/>
-          <NewSong />
           <Recommend />
+          <NewSong />
+          <Exclusive />
         </div>
       )
     }

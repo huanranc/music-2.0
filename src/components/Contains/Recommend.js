@@ -37,7 +37,6 @@ class Recommend extends Component {
       this.setState({result:json.result}));
   };
   showhandle= (key) => {
-    console.log(key)
     this.setState({
       show: 'block'
     })
@@ -49,13 +48,12 @@ class Recommend extends Component {
   }
   render() {
     const {result} = this.state;
-    console.log(this.state.show);
     const resultList=result.length ?
     result.map((newSong,index) => {
        return <li key={index} className="play-list" onMouseOver={ this.showhandle }  onMouseOut= { this.nonehandle}>
        <Link to={`/playlist/${newSong.id}`}>
           <div className="card">
-            <div className="card-image">
+            <div className="card-image image">
               <div className="show" style={{display:this.state.show}}>{newSong.copywriter}</div>
               <img alt="example" width="100%" src={newSong.picUrl} />
             </div>
@@ -70,7 +68,10 @@ class Recommend extends Component {
     ;
     return(
       <div className="recommend">
-          <h2 className="title">推荐歌单</h2>
+          <h2 className="title">
+          推荐歌单
+          <Link to={`/discover/playlist`}><span className="more">>>>更多</span></Link>
+          </h2>
           <ul className="card-row">{resultList}</ul>
       </div>
     )
