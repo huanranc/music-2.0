@@ -11,7 +11,7 @@ import Contains from './components/Contains/Contains';
 import ContainsBody from './components/Contains/ContainsBody';
 import Play from './components/Play/play';
 
-const Main = () => (
+const App = () => (
   <Router>
     <div className="wrap">
     <Header />
@@ -25,5 +25,5 @@ const Main = () => (
   </Router>
 );
 
-export default Main;
+export default App;
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './main';
+import App from './app';
 import './commpon/normalize.css';
 import './commpon/global.css';
 
 ReactDOM.render(
-   <Main />,
+   <App />,
    document.getElementById('root'));
